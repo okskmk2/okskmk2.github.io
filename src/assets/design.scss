@@ -22,6 +22,10 @@
     justify-content: flex-end
 }
 
+.jc-between{
+    justify-content: space-between;
+}
+
 .ai-center {
     align-items: center
 }
@@ -37,6 +41,10 @@
     height: 30rem;
     margin: auto;
     background-color: #f7f7f7;
+}
+
+.rel{
+    position: relative;
 }
 
 .bg{
