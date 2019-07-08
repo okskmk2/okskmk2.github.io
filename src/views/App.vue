@@ -1,24 +1,19 @@
 <template>
   <div id="app">
     <header>
-      <div class="container">
-        <div class="row rest">
-          <div>
-            <div class="brand">
-              <img src="../assets/favicon_v2.png" alt="baeun_logo" width="40px" />
-              {{$t('brand')}}
-            </div>
-            <div class="brand_sub">{{$t('brand_sub')}}</div>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="menu-icon-box">
+            <i class="material-icons menu-icon">menu</i>
           </div>
-          <div class="only-mobile row ai-center rest jc-end">
-            <a data-target="gnb" class="pointer">Menu</a>
-          </div>
+          <img src="../assets/favicon_v2.png" alt="logo" class="logo" />
+          <span class="brand-text">{{$t('brand')}}</span>
         </div>
-        <div class="row-col ai-center hide-mobile" id="gnb">
-          <globalMenu class='row-col'></globalMenu>
-          <nav class="user-nav">
+        <div class="menu">
+          <globalMenu class="gnb"></globalMenu>
+          <div class="unb">
             <i18nChange></i18nChange>
-          </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -54,10 +49,8 @@ export default {
   },
   components: { i18nChange, globalMenu },
   mounted() {
-    let gnbCaller = document.querySelector("[data-target]");
-    gnbCaller.addEventListener("click", function() {
-      let gnb = gnbCaller.getAttribute("data-target");
-      document.getElementById(gnb).classList.toggle("hide-mobile");
+    document.querySelector(".menu-icon").addEventListener("click", function() {
+      document.querySelector(".menu").classList.toggle("show");
     });
   }
 };

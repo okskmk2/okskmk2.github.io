@@ -3,17 +3,14 @@ body {
     margin: 0;    
     color: $base-font-color;
     overflow-y: scroll;
-    font-family: sans-serif
+    font-family: sans-serif;
+    background-color: #fdfdfd;
 }
 
 header {
     border-bottom: 1px solid #ddd;
-    padding: 1rem;
-    &>.container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    background-color: #fefefe;
+    padding: 1rem 0;
     nav {
         &>a {
             color: inherit;
@@ -31,7 +28,6 @@ header {
 }
 
 nav {
-    display: flex;
     &>a {
         text-decoration: none;
         white-space: nowrap;
