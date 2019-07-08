@@ -135,11 +135,12 @@
     .menu.show{
         padding: 1rem;
         position: absolute;
-        display: inline-block;
+        display: block;
         width: 100px;
         top: 71px;
         left: 0;
-        background-color: lightgoldenrodyellow;
+        background-color: #fafafa;
+        height: 100%;
     }
     .gnb>a{
         display: block;
