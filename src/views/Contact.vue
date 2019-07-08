@@ -109,7 +109,7 @@
 hr {
   position: absolute;
   width: 100%;
-  top: 6px;
+  top: 7px;
 }
 .pointer-box {
   display: flex;

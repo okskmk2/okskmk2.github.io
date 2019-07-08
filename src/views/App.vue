@@ -52,6 +52,12 @@ export default {
     document.querySelector(".menu-icon").addEventListener("click", function() {
       document.querySelector(".menu").classList.toggle("show");
     });
+    let as = document.querySelectorAll(".menu a");
+    for (let index = 0; index < as.length; index++) {
+      as[index].addEventListener("click", function() {
+        document.querySelector(".menu").classList.toggle("show");
+      });
+    }
   }
 };
 </script>

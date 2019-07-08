@@ -1,7 +1,7 @@
-.container{
+.container {
     max-width: 74rem;
     margin: 0 auto;
-    padding:0 1rem;
+    padding: 0 1rem;
 }
 
 .col {
@@ -9,8 +9,7 @@
 }
 
 .col,
-.row
-{
+.row {
     display: flex
 }
 
@@ -22,7 +21,7 @@
     justify-content: flex-end
 }
 
-.jc-between{
+.jc-between {
     justify-content: space-between;
 }
 
@@ -30,11 +29,11 @@
     align-items: center
 }
 
-#app{
+#app {
     position: relative;
 }
 
-.modal{
+.modal {
     position: fixed;
     z-index: 2;
     width: 40rem;
@@ -43,11 +42,11 @@
     background-color: #f7f7f7;
 }
 
-.rel{
+.rel {
     position: relative;
 }
 
-.bg{
+.bg {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -55,19 +54,19 @@
     z-index: 1;
 }
 
-.user-nav{
-    &>*{
+.user-nav {
+    &>* {
         margin-left: 3px;
     }
 }
 
-.mr5{
+.mr5 {
     margin-right: 5px;
 }
 
-.brand_sub{
+.brand_sub {
     text-align: center;
-    color:#778;
+    color: #778;
     font-size: 14px;
     margin-top: 6px;
 }
@@ -91,75 +90,80 @@
     }
 }
 
-
-.logo{
+.logo {
     width: 40px;
 }
 
-.brand-text{
+.brand-text {
     font-weight: bold;
     font-size: 1.5rem;
     margin-left: 8px;
 }
 
-.brand{
+.brand {
     display: flex;
     align-items: center;
 }
 
-.menu-icon-box{
+.menu-icon-box {
     width: 2rem;
     display: inline-block;
     height: 2rem;
     margin-right: 1rem;
 }
 
-.menu-icon{
+.menu-icon {
     font-size: 2rem;
 }
 
-.menu-icon-box>.menu-icon{
+.menu-icon-box>.menu-icon {
     display: none;
 }
 
-
-.menu{
+.menu {
     display: flex;
 }
 
-.header-inner{
+.header-inner {
     display: flex;
     justify-content: space-between;
     max-width: 74rem;
     margin: 0 auto;
-    padding:0 1rem;
+    padding: 0 1rem;
 }
 
-
 @media screen and (max-width: 650px) {
-    .menu{
+    .menu {
         display: none;
     }
-    .menu.show{
+    .menu.show {
         padding: 1rem;
         position: absolute;
         display: block;
         width: 100px;
-        top: 71px;
+        top: 70px;
         left: 0;
-        background-color: #fafafa;
+        background-color: #f6f6f6;
         height: 100%;
+        z-index: 100;
     }
-    .gnb>a{
+    .gnb>a {
         display: block;
     }
-    .unb>span{
+    .unb>span {
         display: block;
     }
-    .menu-icon-box>.menu-icon{
+    .menu-icon-box>.menu-icon {
         display: block;
     }
-    .header-inner{
+    .header-inner {
         display: block;
+    }
+    .gnb>a {
+        margin-bottom: 0.25rem;
+        padding:0.25rem 0;
+    }
+    .unb{
+        margin-top: 0.5rem;
     }
 }
