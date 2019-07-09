@@ -6,6 +6,8 @@ import i18n from './i18n'
 import './assets/base.scss';
 import axios from 'axios'
 
+axios.defaults.withCredentials = false;
+
 Vue.config.productionTip = false;
 Vue.prototype.axios = axios;
 
