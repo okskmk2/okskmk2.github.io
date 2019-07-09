@@ -7,6 +7,7 @@ import './assets/base.scss';
 import axios from 'axios'
 
 axios.defaults.withCredentials = false;
+axios.defaults.headers = {'Access-Control-Allow-Origin': 'https://www.tistory.com/'};
 
 Vue.config.productionTip = false;
 Vue.prototype.axios = axios;
