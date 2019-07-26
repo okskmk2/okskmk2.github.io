@@ -3,7 +3,7 @@
     <router-link to="/Profile">
       <span>{{$t('Profile')}}</span>
     </router-link>
-    <router-link to="/Portfolio">
+    <!-- <router-link to="/Portfolio">
       <span>{{$t('Portfolio')}}</span>
     </router-link>
     <router-link to="/Blog">
@@ -11,7 +11,7 @@
     </router-link>
     <router-link to="/Contact">
       <span>{{$t('Contact')}}</span>
-    </router-link>
+    </router-link> -->
   </nav>
 </template>
 

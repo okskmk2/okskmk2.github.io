@@ -8,6 +8,10 @@ import axios from 'axios'
 
 axios.defaults.withCredentials = false;
 axios.defaults.headers = {'Access-Control-Allow-Origin': 'https://www.tistory.com/'};
+axios.defaults.proxy =  {
+  host: 'okskmk2.github.io',
+  port: 80,
+},
 
 Vue.config.productionTip = false;
 Vue.prototype.axios = axios;

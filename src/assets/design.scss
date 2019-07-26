@@ -103,6 +103,12 @@
 .brand {
     display: flex;
     align-items: center;
+    padding:1rem;
+}
+
+
+.gnb, .unb{
+    margin-top:13px;
 }
 
 .menu-icon-box {
@@ -130,6 +136,7 @@
     max-width: 74rem;
     margin: 0 auto;
     padding: 0 1rem;
+    align-items: center;
 }
 
 @media screen and (max-width: 650px) {
@@ -140,10 +147,10 @@
         padding: 1rem;
         position: absolute;
         display: block;
-        width: 100px;
+        width: 10rem;
         top: 70px;
         left: 0;
-        background-color: #f6f6f6;
+        background-color: #f1f1f1;
         height: 100%;
         z-index: 100;
     }
