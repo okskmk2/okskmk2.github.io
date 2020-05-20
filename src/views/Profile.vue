@@ -193,6 +193,9 @@ section {
 }
 article {
   padding: 1rem;
+}
+
+article:not(:last-child){
   border-bottom: 1px solid #ddd;
 }
 </style>

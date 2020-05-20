@@ -3,14 +3,14 @@
     <header>
       <div class="header-inner">
         <div class="brand">
-          <div class="menu-icon-box">
+          <!-- <div class="menu-icon-box">
             <i class="material-icons menu-icon">menu</i>
-          </div>
+          </div> -->
           <img src="../assets/favicon_v2.png" alt="logo" class="logo" />
           <span class="brand-text">{{$t('brand')}}</span>
         </div>
         <div class="menu">
-          <globalMenu class="gnb"></globalMenu>
+          <!-- <globalMenu class="gnb"></globalMenu> -->
           <div class="unb">
             <i18nChange></i18nChange>
           </div>
@@ -48,16 +48,16 @@ export default {
     };
   },
   components: { i18nChange, globalMenu },
-  mounted() {
-    document.querySelector(".menu-icon").addEventListener("click", function() {
-      document.querySelector(".menu").classList.toggle("show");
-    });
-    let as = document.querySelectorAll(".menu a");
-    for (let index = 0; index < as.length; index++) {
-      as[index].addEventListener("click", function() {
-        document.querySelector(".menu").classList.toggle("show");
-      });
-    }
-  }
+  // mounted() {
+  //   document.querySelector(".menu-icon").addEventListener("click", function() {
+  //     document.querySelector(".menu").classList.toggle("show");
+  //   });
+  //   let as = document.querySelectorAll(".menu a");
+  //   for (let index = 0; index < as.length; index++) {
+  //     as[index].addEventListener("click", function() {
+  //       document.querySelector(".menu").classList.toggle("show");
+  //     });
+  //   }
+  // }
 };
 </script>
