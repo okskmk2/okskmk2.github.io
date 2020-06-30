@@ -1,176 +1,186 @@
 .container {
-    max-width: 74rem;
-    margin: 0 auto;
-    padding: 0 1rem;
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .col {
-    flex-direction: column
+  flex-direction: column;
 }
 
 .col,
 .row {
-    display: flex
+  display: flex;
 }
 
 .rest {
-    flex-grow: 1
+  flex-grow: 1;
 }
 
 .jc-end {
-    justify-content: flex-end
+  justify-content: flex-end;
 }
 
 .jc-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .ai-center {
-    align-items: center
+  align-items: center;
 }
 
 #app {
-    position: relative;
+  position: relative;
 }
 
 .modal {
-    position: fixed;
-    z-index: 2;
-    width: 40rem;
-    height: 30rem;
-    margin: auto;
-    background-color: #f7f7f7;
+  position: fixed;
+  z-index: 2;
+  width: 40rem;
+  height: 30rem;
+  margin: auto;
+  background-color: #f7f7f7;
 }
 
 .rel {
-    position: relative;
+  position: relative;
 }
 
 .bg {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1;
 }
 
 .user-nav {
-    &>* {
-        margin-left: 3px;
-    }
+  & > * {
+    margin-left: 3px;
+  }
 }
 
 .mr5 {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .brand_sub {
-    text-align: center;
-    color: #778;
-    font-size: 14px;
-    margin-top: 6px;
+  text-align: center;
+  color: #778;
+  font-size: 14px;
+  margin-top: 6px;
 }
 
 .only-mobile {
-    display: none
+  display: none;
 }
 
-@media (max-width:50rem) {
-    .container {
-        // width: 100%
-    }
+@media (max-width: 50rem) {
+  .container {
+    // width: 100%
+  }
 }
 
-@media (max-width:50rem) {
-    .simple-form {
-        width: inherit
-    }
-    .simple-form input {
-        width: 100%
-    }
+@media (max-width: 50rem) {
+  .simple-form {
+    width: inherit;
+  }
+  .simple-form input {
+    width: 100%;
+  }
 }
 
 .logo {
-    width: 30px;
+  width: 30px;
 }
 
 .brand-text {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-left: 12px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 12px;
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    padding:1rem 0;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
 }
 
-
-.gnb, .unb{
-    margin-top:13px;
+.gnb,
+.unb {
+  margin-top: 13px;
 }
 
 .menu-icon-box {
-    width: 2rem;
-    display: inline-block;
-    height: 2rem;
-    margin-right: 1rem;
+  width: 2rem;
+  display: inline-block;
+  height: 2rem;
+  margin-right: 1rem;
 }
 
 .menu-icon {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-.menu-icon-box>.menu-icon {
-    display: none;
+.menu-icon-box > .menu-icon {
+  display: none;
 }
 
 .menu {
-    display: flex;
+  display: flex;
 }
 
 .header-inner {
-    display: flex;
-    justify-content: space-between;
-    max-width: 74rem;
-    margin: 0 auto;
-    padding: 0 1rem;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+article {
+  padding: 1rem;
 }
 
 @media screen and (max-width: 650px) {
-    // .menu {
-    //     display: none;
-    // }
-    .menu.show {
-        padding: 1rem;
-        position: absolute;
-        display: block;
-        width: 10rem;
-        top: 70px;
-        left: 0;
-        background-color: #f1f1f1;
-        height: 100%;
-        z-index: 100;
-    }
-    .gnb>a {
-        display: block;
-    }
-    .unb>span {
-        display: block;
-    }
-    .menu-icon-box>.menu-icon {
-        display: block;
-    }
-    .header-inner {
-        // display: block;
-    }
-    .gnb>a {
-        margin-bottom: 0.25rem;
-        padding:0.25rem 0;
-    }
-    .unb{
-        margin-top: 0.5rem;
-    }
+  // .menu {
+  //     display: none;
+  // }
+  .menu.show {
+    padding: 1rem;
+    position: absolute;
+    display: block;
+    width: 10rem;
+    top: 70px;
+    left: 0;
+    background-color: #f1f1f1;
+    height: 100%;
+    z-index: 100;
+  }
+  .gnb > a {
+    display: block;
+  }
+  .unb > span {
+    display: block;
+  }
+  .menu-icon-box > .menu-icon {
+    display: block;
+  }
+  .brand-text {
+    font-size: 18px;
+  }
+  .logo {
+    width: 20px;
+  }
+  .gnb > a {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+  }
+  .unb {
+    margin-top: 0.5rem;
+  }
+  article {
+    padding: 0;
+  }
 }

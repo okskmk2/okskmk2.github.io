@@ -10,6 +10,9 @@
     moto: Readable site, Best site
     skhynix: SK hynix IT
     hanhwa_onsure: Hanhwa Life Onsure
+    front_end_dev: Lead Front-End Dev
+    samsung_sds_desc: Samsung SDS
+    baeun: Baeun
   ko: 
     title: 프로필
     basic: 기본정보
@@ -21,6 +24,9 @@
     moto: 읽기 쉬운 사이트가 가장 좋은 사이트이다.
     skhynix: SK 하이닉스 정보화
     hanhwa_onsure: 한화생명 온슈어
+    front_end_dev: 웹 클라이언트 개발팀장
+    samsung_sds_desc: 삼성 SDS
+    baeun: 바은
   ja: 
     title: プロフィール
     phonenumber: +82 1049200523
@@ -31,7 +37,6 @@
 
 <template>
   <div>
-    <h1>{{ $t('title') }}</h1>
     <section>
       <h2>
         <i class="fa fa-address-card fa-fw mr5"></i>
@@ -65,6 +70,24 @@
         <i class="fa fa-suitcase fa-fw mr5"></i>
         {{ $t('workExperience')}}
       </h2>
+      <article>
+        <h3>{{ $t('front_end_dev')}} / {{ $t('samsung_sds_desc')}}</h3>
+        <h4>
+          <i class="fa fa-calendar fa-fw mr5"></i>2020-06 ~
+        </h4>
+        <p>삼성SDS에서 워크스페이스 웹 클라이언트를 개발하고 있습니다.</p>
+        <p>기술스택 : React<p>
+        <p>역할 : PL(프로젝트리더) 개발</p>
+      </article>     
+      <article>
+        <h3>CTO /  {{ $t('baeun')}}</h3>
+        <h4>
+          <i class="fa fa-calendar fa-fw mr5"></i>2019-07 ~ 2020-06
+        </h4>
+        <p>글로벌 공동목표 관리 플랫폼 웹서비스를 개발하였습니다.</p>
+        <p>기술스택 : spring boot, jsp, mariaDB</p>
+        <p>역할 : CTO(기술총책임)</p>
+      </article>       
       <article>
         <h3>{{ $t('webdeveloper')}} & Server Engineer / {{ $t('skhynix')}}</h3>
         <h4>
@@ -191,10 +214,6 @@ section {
   box-shadow: 1px 1px 2px 1px #bbb;
   margin-top: 1rem;
 }
-article {
-  padding: 1rem;
-}
-
 article:not(:last-child){
   border-bottom: 1px solid #ddd;
 }

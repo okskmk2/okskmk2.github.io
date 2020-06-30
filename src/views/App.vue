@@ -29,11 +29,9 @@
 
 <i18n>
 ko:
-  brand: 바은
-  brand_sub: 소프트웨어 개발사
+  brand: 이은성 프로필
 en:
-  brand: Baeun
-  brand_sub: Software Company
+  brand: Eunsung Lee's Profile
 </i18n>
 
 <script>
