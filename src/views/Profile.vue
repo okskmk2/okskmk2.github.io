@@ -134,7 +134,7 @@
         <p>역할 : 개발</p>
       </article>
     </section>
-    <section>
+    <!-- <section>
       <h2>
         <i class="fa fa-certificate fa-fw mr5"></i>
         {{ $t('education')}}
@@ -182,7 +182,7 @@
         <p>수석 수료</p>
         <p>주요 이수기술 : OracleSQL, Java, Javascript, Android</p>
       </article>
-    </section>
+    </section> -->
   </div>
 </template>
 <script>

@@ -11,18 +11,18 @@
         </div>
         <div class="menu">
           <!-- <globalMenu class="gnb"></globalMenu> -->
-          <div class="unb">
+          <!-- <div class="unb">
             <i18nChange></i18nChange>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
     <router-view class="container" />
     <footer>
-      <div class="container">
+      <!-- <div class="container">
         <i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i>
         <i class="fa fa-instagram fa-fw" aria-hidden="true"></i>
-      </div>
+      </div> -->
     </footer>
   </div>
 </template>
