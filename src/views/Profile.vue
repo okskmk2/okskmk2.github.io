@@ -77,16 +77,16 @@
         </h4>
         <p>물성예측을 위한 인공지능 기계학습 플랫폼을 운영하고 있습니다.</p>
         <p>기술스택 : vuejs, python, pandas, mariaDB, redis, azure<p>
-        <p>역할 : 설계 / 개발</p>
+        <p>역할 : 운영</p>
       </article>
       <article>
         <h3>LG전자 퀵헬프 웹프로젝트</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2020-12 ~ 2021-2
         </h4>
-        <p>LG전자 퀵헬프에서 인증 모듈을 설계 구현하였습니다.</p>
+        <p>LG전자 퀵헬프에서 인증 모듈을 구현하였습니다.</p>
         <p>기술스택 : java, spring security, jwt, redis, oracle<p>
-        <p>역할 : 운영</p>
+        <p>역할 : 개발</p>
       </article>
       <article>
         <h3>삼성 녹스팀즈 웹클라이언트 운영개발</h3>
