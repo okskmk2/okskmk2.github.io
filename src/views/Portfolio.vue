@@ -29,7 +29,7 @@
     </article>
     <article>
       <h2>부하분산시설</h2>
-      <img src="../assets/lsf.png">
+      <img src="../assets/lsf.png" alt="">
       <p>대규모 작업을 처리하기 위한 부하분산 시스템</p>
       <p>jsp</p>
     </article>

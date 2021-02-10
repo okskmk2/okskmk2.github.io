@@ -71,34 +71,52 @@
         {{ $t('workExperience')}}
       </h2>
       <article>
-        <h3>{{ $t('front_end_dev')}} / {{ $t('samsung_sds_desc')}}</h3>
+        <h3>SK이노베이션 위더스 프로젝트</h3>
         <h4>
-          <i class="fa fa-calendar fa-fw mr5"></i>2020-06 ~
+          <i class="fa fa-calendar fa-fw mr5"></i>2021-2 ~
         </h4>
-        <p>삼성SDS에서 워크스페이스 웹 클라이언트를 개발하고 있습니다.</p>
-        <p>기술스택 : React<p>
-        <p>역할 : PL(프로젝트리더)</p>
+        <p>물성예측을 위한 인공지능 기계학습 플랫폼을 운영하고 있습니다.</p>
+        <p>기술스택 : vuejs, python, pandas, mariaDB, redis, azure<p>
+        <p>역할 : 설계 / 개발</p>
+      </article>
+      <article>
+        <h3>LG전자 퀵헬프 웹프로젝트</h3>
+        <h4>
+          <i class="fa fa-calendar fa-fw mr5"></i>2020-12 ~ 2021-2
+        </h4>
+        <p>LG전자 퀵헬프에서 인증 모듈을 설계 구현하였습니다.</p>
+        <p>기술스택 : java, spring security, jwt, redis, oracle<p>
+        <p>역할 : 운영</p>
+      </article>
+      <article>
+        <h3>삼성 녹스팀즈 웹클라이언트 운영개발</h3>
+        <h4>
+          <i class="fa fa-calendar fa-fw mr5"></i>2020-06 ~ 2020-12
+        </h4>
+        <p>삼성SDS에서 그룹웨어 웹 클라이언트를 개발 운영하였습니다.</p>
+        <p>기술스택 : React, Websocket<p>
+        <p>역할 : 개발팀장</p>
       </article>     
       <article>
-        <h3>CTO /  {{ $t('baeun')}}</h3>
+        <h3>바은 자기개발SNS 프로젝트</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2019-07 ~ 2020-06
         </h4>
         <p>글로벌 공동목표 관리 플랫폼 웹서비스를 개발하였습니다.</p>
         <p>기술스택 : spring boot, jsp, mariaDB</p>
-        <p>역할 : CTO(기술총책임)</p>
+        <p>역할 : 개발팀장</p>
       </article>       
       <article>
-        <h3>{{ $t('webdeveloper')}} & Server Engineer / {{ $t('skhynix')}}</h3>
+        <h3>SK하이닉스 인프라 유지보수</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2018-01 ~ 2019-07
         </h4>
-        <p>IBM LSF 시스템을 파이썬으로 웹, API서버로 확장하였습니다. 개발한 서비스를 국내 2대 서버, 해외 4대 서버를 운영하였습니다.</p>
+        <p>IBM <span title="대규모 부하분산 시스템">LSF</span> 시스템을 파이썬으로 웹, API서버로 확장하였습니다. 개발한 서비스를 국내 2대 서버, 해외 4대 서버를 운영하였습니다.</p>
         <p>기술스택 : Oracle SQL, Mysql, LSF python API, django, Java</p>
         <p>역할 : 설계, 개발, 운영</p>
       </article>
       <article>
-        <h3>{{ $t('webdeveloper')}} / {{ $t('hanhwa_onsure')}}</h3>
+        <h3>한화생명 온슈어 웹프로젝트</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2017-09 ~ 2017-11
         </h4>
@@ -107,16 +125,16 @@
         <p>역할 : 개발</p>
       </article>
       <article>
-        <h3>CTO / 아트투게더</h3>
+        <h3>아트투게더</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2017-07 ~ 2017-09
         </h4>
         <p>스타트업 초기 기술 로드맵과 자바 스프링을 사용하여 프로토타입의 웹 사이트를 개발하였습니다. MariaDB를 사용하였습니다. 자료 수집을 위해 웹크롤링 작업도 병행하였습니다.</p>
         <p>기술스택 : MariaDB, Java, Spring MVC</p>
-        <p>역할 : 프로젝트 설계, 개발, 운영</p>
+        <p>역할 : 설계, 개발, 운영</p>
       </article>
       <article>
-        <h3>UI Developer / 농협 IFRS9 구축</h3>
+        <h3>농협 IFRS9 구축</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2016-09 ~ 2017-05
         </h4>
@@ -125,7 +143,7 @@
         <p>역할 : 개발</p>
       </article>
       <article>
-        <h3>Java Developer / 농협 핀테크 오픈 API 플랫폼 고도화</h3>
+        <h3>농협 핀테크 오픈 API 플랫폼 고도화</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2016-04 ~ 2016-09
         </h4>
