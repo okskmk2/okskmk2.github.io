@@ -80,6 +80,15 @@
         <p>역할 : 운영</p>
       </article>
       <article>
+        <h3>LG전자 담다 프로젝트</h3>
+        <h4>
+          <i class="fa fa-calendar fa-fw mr5"></i>2021-9 ~ 2021-10
+        </h4>
+        <p>전자제품 API 도큐먼트 퍼블리싱 작업을 하였습니다.</p>
+        <p>기술스택 : vuejs<p>
+        <p>역할 : 프론트앤드</p>
+      </article>
+      <article>
         <h3>LG전자 퀵헬프 웹프로젝트</h3>
         <h4>
           <i class="fa fa-calendar fa-fw mr5"></i>2020-12 ~ 2021-2
