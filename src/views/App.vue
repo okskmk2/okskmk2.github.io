@@ -10,10 +10,10 @@
           <span class="brand-text">{{$t('brand')}}</span>
         </div>
         <div class="menu">
-          <!-- <globalMenu class="gnb"></globalMenu> -->
-          <!-- <div class="unb">
+          <globalMenu class="gnb"></globalMenu>
+          <div class="unb">
             <i18nChange></i18nChange>
-          </div> -->
+          </div>
         </div>
       </div>
     </header>
