@@ -68,6 +68,7 @@ h2 {
 }
 
 article {
+  background-color: #fff;
   padding: 2rem;
   border: 1px solid #ddd;
   img {
