@@ -48,9 +48,9 @@
         }
 
         h2 {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 0;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
 
         h2+div {
@@ -58,9 +58,9 @@
         }
 
         h3 {
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 0;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
         }
 
         h3+div {
@@ -108,11 +108,16 @@
             transition: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
             border-radius: 2px;
             color: #777;
+            user-select: none;
         }
 
         .label_input input {
             text-align: right;
             padding: 4px 0;
+        }
+
+        .label_input.small-input input {
+            width: 5rem;
         }
 
         select {
@@ -148,7 +153,7 @@
         }
 
         .h-spacer {
-            border-left: 1px solid #aaa;
+            border-left: 1px solid #ddd;
             margin: 0 24px;
         }
 
@@ -219,7 +224,7 @@
             <div class="col gap5" style="flex-grow: 1;min-width: 50rem;">
                 <div class="row gap5">
                     <div class="panel">
-                        <h2>추천 레시피 검색</h2>
+                        <h2>레시피 검색 양식</h2>
                         <div class="col">
                             <div class="b-border">
                                 <h3>목표물성</h3>
@@ -345,22 +350,22 @@
                                 <div class="error-msg">에러메시지</div>
                             </div>
                             <div>
-                                <h3>검색조건(선택사항)</h3>
+                                <h3>제약조건</h3>
                                 <div class="row">
-                                    <div>
+                                    <div class="rest">
                                         <h4>rpp</h4>
                                         <div class="col gap18">
                                             <div>
                                                 <h5>그룹</h5>
-                                                <div class="label_input">
+                                                <div class="label_input small-input">
                                                     <label>min</label>
                                                     <input type="number">
                                                 </div>
-                                                <div class="label_input">
+                                                <div class="label_input small-input">
                                                     <label>max</label>
                                                     <input type="number">
                                                 </div>
-                                                <div class="label_input">
+                                                <div class="label_input small-input">
                                                     <label>step</label>
                                                     <input type="number">
                                                 </div>
@@ -370,21 +375,21 @@
                                                 <div class="col gap5">
                                                     <div class="row jc-between ai-center">
                                                         <span>sdfjlsdjfasd</span>
-                                                        <div class="label_input">
+                                                        <div class="label_input small-input">
                                                             <label>고정비율</label>
                                                             <input type="number">
                                                         </div>
                                                     </div>
                                                     <div class="row jc-between ai-center">
                                                         <span>sdfjlsdjfasd</span>
-                                                        <div class="label_input">
+                                                        <div class="label_input small-input">
                                                             <label>고정비율</label>
                                                             <input type="number">
                                                         </div>
                                                     </div>
                                                     <div class="row jc-between ai-center">
                                                         <span>sdfjlsdjfasd</span>
-                                                        <div class="label_input">
+                                                        <div class="label_input small-input">
                                                             <label>고정비율</label>
                                                             <input type="number">
                                                         </div>
@@ -394,59 +399,59 @@
                                         </div>
                                     </div>
                                     <div class="h-spacer"></div>
-                                    <div class="col gap18">
+                                    <div class="rest">
+                                        <h4>poe</h4>
                                         <div>
-                                            <h4>poe</h4>
-                                            <div>
-                                                <h5>그룹</h5>
-                                                <div class="label_input">
-                                                    <label>min</label>
-                                                    <input type="number">
-                                                </div>
-                                                <div class="label_input">
-                                                    <label>max</label>
-                                                    <input type="number">
-                                                </div>
-                                                <div class="label_input">
-                                                    <label>step</label>
-                                                    <input type="number">
-                                                </div>
+                                            <h5>그룹</h5>
+                                            <div class="label_input small-input">
+                                                <label>min</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="label_input small-input">
+                                                <label>max</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="label_input small-input">
+                                                <label>step</label>
+                                                <input type="number">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="h-spacer"></div>
+                                    <div class="rest">
+                                        <h4>talc</h4>
                                         <div>
-                                            <h4>talc</h4>
-                                            <div>
-                                                <h5>그룹</h5>
-                                                <div class="label_input">
-                                                    <label>min</label>
-                                                    <input type="number">
-                                                </div>
-                                                <div class="label_input">
-                                                    <label>max</label>
-                                                    <input type="number">
-                                                </div>
-                                                <div class="label_input">
-                                                    <label>step</label>
-                                                    <input type="number">
-                                                </div>
+                                            <h5>그룹</h5>
+                                            <div class="label_input small-input">
+                                                <label>min</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="label_input small-input">
+                                                <label>max</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="label_input small-input">
+                                                <label>step</label>
+                                                <input type="number">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="h-spacer"></div>
+                                    <div class="rest">
+                                        <h4>vpp</h4>
                                         <div>
-                                            <h4>vpp</h4>
-                                            <div>
-                                                <h5>그룹</h5>
-                                                <div class="label_input">
-                                                    <label>min</label>
-                                                    <input type="number">
-                                                </div>
-                                                <div class="label_input">
-                                                    <label>max</label>
-                                                    <input type="number">
-                                                </div>
-                                                <div class="label_input">
-                                                    <label>step</label>
-                                                    <input type="number">
-                                                </div>
+                                            <h5>그룹</h5>
+                                            <div class="label_input small-input">
+                                                <label>min</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="label_input small-input">
+                                                <label>max</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="label_input small-input">
+                                                <label>step</label>
+                                                <input type="number">
                                             </div>
                                         </div>
                                     </div>
@@ -459,11 +464,11 @@
                         </div>
                     </div>
                     <aside class="panel" style="min-width: 10rem;">
-                        <h2>히스토리</h2>
+                        <h2>검색 이력</h2>
                     </aside>
                 </div>
                 <div class="panel">
-                    <h2>추천 레시피 결과</h2>
+                    <h2>레시피 결과</h2>
                 </div>
             </div>
         </div>
