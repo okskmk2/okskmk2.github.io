@@ -195,273 +195,276 @@
         .big-btn {
             padding: 12px 32px;
             font-size: 16px;
-            background-color: #222;
+            background-color: #292930;
             color: white;
-            border-radius: 4px;
             border-style: none;
-            box-shadow: 1px 1px 4px 2px #aaa;
+            transition: background-color 0.25s ease-out;
         }
 
-        .big-btn:hover{
-            box-shadow: 1px 1px 5px 3px #999;
+        .big-btn:hover {
+            background-color: #000;
         }
     </style>
 </head>
 
 <body>
-    <div style="padding:20px">
-        <div class="row jc-between ai-start">
-            <h1>폐플라스틱 프로젝트</h1>
-            <button id="error_msg_btn">에러메시지 테스트</button>
+    <div class="row">
+        <div style="min-width:255px;background-color:#292930">
         </div>
-        <div class="col gap5" style="flex-grow: 1;min-width: 50rem;">
-            <div class="row gap5">
-                <div class="panel">
-                    <h2>추천 레시피 검색</h2>
-                    <div class="col">
-                        <div class="b-border">
-                            <h3>목표물성</h3>
-                            <div class="row" style="gap:16px">
-                                <div class="label_input">
-                                    <label>MI</label>
-                                    <input type="number">
-                                </div>
-                                <div class="label_input">
-                                    <label>FM</label>
-                                    <input type="number">
-                                </div>
-                                <div class="label_input">
-                                    <label>TS</label>
-                                    <input type="number">
-                                </div>
-                                <div class="label_input">
-                                    <label>IZOD</label>
-                                    <input type="number">
-                                </div>
-                            </div>
-                            <div class="error-msg">에러메시지</div>
-                        </div>
-                        <div class="b-border">
-                            <h3>재료들</h3>
-                            <div class="col gap12">
-                                <div class="gap4">
-                                    <h4>rpp</h4>
-                                    <div class="col gap5">
-                                        <div>
-                                            <select name="" id="">
-                                                <option value="">sdfjlsdjfasd</option>
-                                                <option value="">sdfjlsdjfasd</option>
-                                            </select>
-                                            <div class="label_input">
-                                                <label>MI</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>FM</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>TS</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>IZOD</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>cost</label>
-                                                <input type="number">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <select name="" id="">
-                                                <option value="">sdfjlsdjfasd</option>
-                                                <option value="">sdfjlsdjfasd</option>
-                                            </select>
-                                            <div class="label_input">
-                                                <label>MI</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>FM</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>TS</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>IZOD</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>cost</label>
-                                                <input type="number">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <select name="" id="">
-                                                <option value="">sdfjlsdjfasd</option>
-                                                <option value="">sdfjlsdjfasd</option>
-                                            </select>
-                                            <div class="label_input">
-                                                <label>MI</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>FM</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>TS</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>IZOD</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>cost</label>
-                                                <input type="number">
-                                            </div>
-                                        </div>
+        <div style="padding:20px;">
+            <div class="row jc-between ai-start">
+                <h1>폐플라스틱 프로젝트</h1>
+                <button id="error_msg_btn">에러메시지 테스트</button>
+            </div>
+            <div class="col gap5" style="flex-grow: 1;min-width: 50rem;">
+                <div class="row gap5">
+                    <div class="panel">
+                        <h2>추천 레시피 검색</h2>
+                        <div class="col">
+                            <div class="b-border">
+                                <h3>목표물성</h3>
+                                <div class="row" style="gap:16px">
+                                    <div class="label_input">
+                                        <label>MI</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="label_input">
+                                        <label>FM</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="label_input">
+                                        <label>TS</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="label_input">
+                                        <label>IZOD</label>
+                                        <input type="number">
                                     </div>
                                 </div>
-                                <div>
-                                    <h4>poe</h4>
-                                    <div id="poe_grades"></div>
-                                </div>
-                                <div>
-                                    <h4>talc</h4>
-                                    <div id="talc_grades"></div>
-                                </div>
-                                <div>
-                                    <h4>vpp</h4>
-                                    <div id="vpp_grades"></div>
-                                </div>
+                                <div class="error-msg">에러메시지</div>
                             </div>
-                            <div class="error-msg">에러메시지</div>
-                        </div>
-                        <div>
-                            <h3>검색조건(선택사항)</h3>
-                            <div class="row">
-                                <div>
-                                    <h4>rpp</h4>
-                                    <div class="col gap12">
-                                        <div>
-                                            <h5>그룹</h5>
-                                            <div class="label_input">
-                                                <label>min</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>max</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>step</label>
-                                                <input type="number">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h5>개별</h5>
-                                            <div class="col gap5">
-                                                <div class="row jc-between ai-center">
-                                                    <span>sdfjlsdjfasd</span>
-                                                    <div class="label_input">
-                                                        <label>고정비율</label>
-                                                        <input type="number">
-                                                    </div>
-                                                </div>
-                                                <div class="row jc-between ai-center">
-                                                    <span>sdfjlsdjfasd</span>
-                                                    <div class="label_input">
-                                                        <label>고정비율</label>
-                                                        <input type="number">
-                                                    </div>
-                                                </div>
-                                                <div class="row jc-between ai-center">
-                                                    <span>sdfjlsdjfasd</span>
-                                                    <div class="label_input">
-                                                        <label>고정비율</label>
-                                                        <input type="number">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="h-spacer"></div>
+                            <div class="b-border">
+                                <h3>재료들</h3>
                                 <div class="col gap12">
+                                    <div class="gap4">
+                                        <h4>rpp</h4>
+                                        <div class="col gap5">
+                                            <div>
+                                                <select name="" id="">
+                                                    <option value="">sdfjlsdjfasd</option>
+                                                    <option value="">sdfjlsdjfasd</option>
+                                                </select>
+                                                <div class="label_input">
+                                                    <label>MI</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>FM</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>TS</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>IZOD</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>cost</label>
+                                                    <input type="number">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <select name="" id="">
+                                                    <option value="">sdfjlsdjfasd</option>
+                                                    <option value="">sdfjlsdjfasd</option>
+                                                </select>
+                                                <div class="label_input">
+                                                    <label>MI</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>FM</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>TS</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>IZOD</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>cost</label>
+                                                    <input type="number">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <select name="" id="">
+                                                    <option value="">sdfjlsdjfasd</option>
+                                                    <option value="">sdfjlsdjfasd</option>
+                                                </select>
+                                                <div class="label_input">
+                                                    <label>MI</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>FM</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>TS</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>IZOD</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>cost</label>
+                                                    <input type="number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div>
                                         <h4>poe</h4>
-                                        <div>
-                                            <h5>그룹</h5>
-                                            <div class="label_input">
-                                                <label>min</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>max</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>step</label>
-                                                <input type="number">
-                                            </div>
-                                        </div>
+                                        <div id="poe_grades"></div>
                                     </div>
                                     <div>
                                         <h4>talc</h4>
-                                        <div>
-                                            <h5>그룹</h5>
-                                            <div class="label_input">
-                                                <label>min</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>max</label>
-                                                <input type="number">
-                                            </div>
-                                            <div class="label_input">
-                                                <label>step</label>
-                                                <input type="number">
-                                            </div>
-                                        </div>
+                                        <div id="talc_grades"></div>
                                     </div>
                                     <div>
                                         <h4>vpp</h4>
+                                        <div id="vpp_grades"></div>
+                                    </div>
+                                </div>
+                                <div class="error-msg">에러메시지</div>
+                            </div>
+                            <div>
+                                <h3>검색조건(선택사항)</h3>
+                                <div class="row">
+                                    <div>
+                                        <h4>rpp</h4>
+                                        <div class="col gap12">
+                                            <div>
+                                                <h5>그룹</h5>
+                                                <div class="label_input">
+                                                    <label>min</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>max</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>step</label>
+                                                    <input type="number">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5>개별</h5>
+                                                <div class="col gap5">
+                                                    <div class="row jc-between ai-center">
+                                                        <span>sdfjlsdjfasd</span>
+                                                        <div class="label_input">
+                                                            <label>고정비율</label>
+                                                            <input type="number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row jc-between ai-center">
+                                                        <span>sdfjlsdjfasd</span>
+                                                        <div class="label_input">
+                                                            <label>고정비율</label>
+                                                            <input type="number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row jc-between ai-center">
+                                                        <span>sdfjlsdjfasd</span>
+                                                        <div class="label_input">
+                                                            <label>고정비율</label>
+                                                            <input type="number">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="h-spacer"></div>
+                                    <div class="col gap12">
                                         <div>
-                                            <h5>그룹</h5>
-                                            <div class="label_input">
-                                                <label>min</label>
-                                                <input type="number">
+                                            <h4>poe</h4>
+                                            <div>
+                                                <h5>그룹</h5>
+                                                <div class="label_input">
+                                                    <label>min</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>max</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>step</label>
+                                                    <input type="number">
+                                                </div>
                                             </div>
-                                            <div class="label_input">
-                                                <label>max</label>
-                                                <input type="number">
+                                        </div>
+                                        <div>
+                                            <h4>talc</h4>
+                                            <div>
+                                                <h5>그룹</h5>
+                                                <div class="label_input">
+                                                    <label>min</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>max</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>step</label>
+                                                    <input type="number">
+                                                </div>
                                             </div>
-                                            <div class="label_input">
-                                                <label>step</label>
-                                                <input type="number">
+                                        </div>
+                                        <div>
+                                            <h4>vpp</h4>
+                                            <div>
+                                                <h5>그룹</h5>
+                                                <div class="label_input">
+                                                    <label>min</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>max</label>
+                                                    <input type="number">
+                                                </div>
+                                                <div class="label_input">
+                                                    <label>step</label>
+                                                    <input type="number">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="error-msg">에러메시지</div>
                             </div>
-                            <div class="error-msg">에러메시지</div>
-                        </div>
-                        <div class="row jc-center" style="margin-top:42px">
-                            <button class="big-btn">레시피 조회</button>
+                            <div class="row jc-center" style="margin-top:42px">
+                                <button class="big-btn">레시피 조회</button>
+                            </div>
                         </div>
                     </div>
+                    <aside class="panel" style="min-width: 10rem;">
+                        <h2>히스토리</h2>
+                    </aside>
                 </div>
-                <aside class="panel" style="min-width: 10rem;">
-                    <h2>히스토리</h2>
-                </aside>
-            </div>
-            <div class="panel">
-                <h2>추천 레시피 결과</h2>
+                <div class="panel">
+                    <h2>추천 레시피 결과</h2>
+                </div>
             </div>
         </div>
     </div>
