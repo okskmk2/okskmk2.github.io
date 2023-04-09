@@ -1,24 +1,14 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
 import App from './views/App.vue'
 import router from './router'
-import store from './store'
-import i18n from './i18n'
+
 import './assets/base.scss';
-import axios from 'axios'
 
-axios.defaults.withCredentials = false;
-axios.defaults.headers = {'Access-Control-Allow-Origin': 'https://www.tistory.com/'};
-axios.defaults.proxy =  {
-  host: 'okskmk2.github.io',
-  port: 80,
-},
+const app = createApp(App)
 
-Vue.config.productionTip = false;
-Vue.prototype.axios = axios;
+app.use(createPinia())
+app.use(router)
 
-new Vue({
-  i18n,
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+app.mount('#app')

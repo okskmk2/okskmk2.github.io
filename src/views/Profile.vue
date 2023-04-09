@@ -1,74 +1,30 @@
-<i18n>
-  en: 
-    title: Profile
-    basic: Basic Information
-    education: Education
-    workExperience: Work Experience
-    phonenumber: +82 1049200523
-    address: Seoul, South Korea
-    webdeveloper: Web Developer
-    moto: Readable site, Best site
-    skhynix: SK hynix IT
-    hanhwa_onsure: Hanhwa Life Onsure
-    front_end_dev: Lead Front-End Dev
-    samsung_sds_desc: Samsung SDS
-    baeun: Baeun
-  ko: 
-    title: 프로필
-    basic: 기본정보
-    education: 교육이수
-    workExperience: 실무경험
-    phonenumber: 010-4920-0523
-    address: 한국 서울시
-    webdeveloper: 웹 개발자
-    moto: 읽기 쉬운 사이트가 가장 좋은 사이트이다.
-    skhynix: SK 하이닉스 정보화
-    hanhwa_onsure: 한화생명 온슈어
-    front_end_dev: 웹 클라이언트 개발팀장
-    samsung_sds_desc: 삼성 SDS
-    baeun: 바은
-  ja: 
-    title: プロフィール
-    phonenumber: +82 1049200523
-  zh: 
-    title: 轮廓
-    phonenumber: +82 1049200523
-</i18n>
-
 <template>
   <div>
     <section>
       <h2>
-        <i class="fa fa-address-card fa-fw mr5"></i>
-        {{ $t("basic") }}
+        <i class="fa fa-address-card fa-fw mr5"></i> 기본정보
       </h2>
       <article>
         <p>
-          <i class="fa fa-briefcase fa-fw mr5"></i>
-          {{ $t("webdeveloper") }}
+          <i class="fa fa-briefcase fa-fw mr5"></i> 웹 개발자
         </p>
         <p>
-          <i class="fa fa-home fa-fw mr5"></i>
-          {{ $t("address") }}
+          <i class="fa fa-home fa-fw mr5"></i> 한국 부천시
         </p>
         <p>
-          <i class="fa fa-envelope fa-fw mr5"></i>
-          eunsung.lee@baeun.com
+          <i class="fa fa-envelope fa-fw mr5"></i> eunsung.lee@baeun.com
         </p>
         <p>
-          <i class="fa fa-phone fa-fw mr5"></i>
-          {{ $t("phonenumber") }}
+          <i class="fa fa-phone fa-fw mr5"></i> 010-4920-0523
         </p>
         <p>
-          <i class="fa fa-comment fa-fw mr5"></i>
-          {{ $t("moto") }}
+          <i class="fa fa-comment fa-fw mr5"></i> 읽기 쉬운 사이트가 가장 좋은 사이트이다.
         </p>
       </article>
     </section>
     <section>
       <h2>
-        <i class="fa fa-suitcase fa-fw mr5"></i>
-        {{ $t("workExperience") }}
+        <i class="fa fa-suitcase fa-fw mr5"></i> 실무경험
       </h2>
       <article>
         <h3>SK이노베이션 위더스 프로젝트</h3>
@@ -111,6 +67,13 @@
         <p>역할 : 개발팀장</p>
       </article>
       <article>
+        <h3>고려대학교 인공지능 연구소 프로젝트</h3>
+        <h4><i class="fa fa-calendar fa-fw mr5"></i>2019-11 ~ 2019-12</h4>
+        <p>인공지능 컴퓨터 비전을 통해 휴머노이드 로봇 개발에 참여하였습니다.</p>
+        <p>기술스택 : python</p>
+        <p>역할 : 개발</p>
+      </article>
+      <article>
         <h3>바은 자기개발SNS 프로젝트</h3>
         <h4><i class="fa fa-calendar fa-fw mr5"></i>2019-07 ~ 2020-06</h4>
         <p>글로벌 공동목표 관리 플랫폼 웹서비스를 개발하였습니다.</p>
@@ -120,10 +83,7 @@
       <article>
         <h3>SK하이닉스 인프라 유지보수</h3>
         <h4><i class="fa fa-calendar fa-fw mr5"></i>2018-01 ~ 2019-07</h4>
-        <p>
-          IBM <span title="대규모 부하분산 시스템">LSF</span> 시스템을
-          파이썬으로 웹, API서버로 확장하였습니다. 개발한 서비스를 국내 2대
-          서버, 해외 4대 서버를 운영하였습니다.
+        <p> IBM <span title="대규모 부하분산 시스템">LSF</span> 시스템을 파이썬으로 웹, API서버로 확장하였습니다. 개발한 서비스를 국내 2대 서버, 해외 4대 서버를 운영하였습니다.
         </p>
         <p>기술스택 : Oracle SQL, Mysql, LSF python API, django, Java</p>
         <p>역할 : 설계, 개발, 운영</p>
@@ -131,50 +91,44 @@
       <article>
         <h3>한화생명 온슈어 웹프로젝트</h3>
         <h4><i class="fa fa-calendar fa-fw mr5"></i>2017-09 ~ 2017-11</h4>
-        <p>
-          자바 스프링과 JSP를 사용하여 배치시스템을 개발하고, 해피콜 개발,
-          카카오링크 연동을 하였습니다. SQL Server를 사용하였습니다.
-        </p>
+        <p> 자바 스프링과 JSP를 사용하여 배치시스템을 개발하고, 해피콜 개발, 카카오링크 연동을 하였습니다. SQL Server를 사용하였습니다. </p>
         <p>기술스택 : SQL Server, Java, Spring MVC</p>
         <p>역할 : 개발</p>
       </article>
       <article>
         <h3>아트투게더</h3>
         <h4><i class="fa fa-calendar fa-fw mr5"></i>2017-07 ~ 2017-09</h4>
-        <p>
-          스타트업 초기 기술 로드맵과 자바 스프링을 사용하여 프로토타입의 웹
-          사이트를 개발하였습니다. MariaDB를 사용하였습니다. 자료 수집을 위해
-          웹크롤링 작업도 병행하였습니다.
-        </p>
+        <p> 스타트업 초기 기술 로드맵과 자바 스프링을 사용하여 프로토타입의 웹 사이트를 개발하였습니다. MariaDB를 사용하였습니다. 자료 수집을 위해 웹크롤링 작업도 병행하였습니다. </p>
         <p>기술스택 : MariaDB, Java, Spring MVC</p>
         <p>역할 : 설계, 개발, 운영</p>
       </article>
       <article>
         <h3>농협 IFRS9 구축</h3>
         <h4><i class="fa fa-calendar fa-fw mr5"></i>2016-09 ~ 2017-05</h4>
-        <p>
-          농협 자체 화면 개발도구로 화면을 개발하였고 서버 환경에서 C언어로
-          회계업무로직을 개발하였습니다. OracleSQL를 사용하였습니다.
-        </p>
+        <p> 농협 자체 화면 개발도구로 화면을 개발하였고 서버 환경에서 C언어로 회계업무로직을 개발하였습니다. OracleSQL를 사용하였습니다. </p>
         <p>기술스택 : OracleSQL, Jscript(이지빌더), Proframe C</p>
         <p>역할 : 개발</p>
       </article>
       <article>
         <h3>농협 핀테크 오픈 API 플랫폼 고도화</h3>
         <h4><i class="fa fa-calendar fa-fw mr5"></i>2016-04 ~ 2016-09</h4>
-        <p>
-          자바를 이용하여 핀테크 오픈 API를 개발하였습니다. 신용카드결재API,
-          제휴기관API를 개발하였습니다.
-        </p>
+        <p> 자바를 이용하여 핀테크 오픈 API를 개발하였습니다. 신용카드결재API, 제휴기관API를 개발하였습니다. </p>
         <p>기술스택 : Java / JSP</p>
         <p>역할 : 개발</p>
       </article>
     </section>
-    <!-- <section>
+    <section>
       <h2>
         <i class="fa fa-certificate fa-fw mr5"></i>
-        {{ $t('education')}}
+        교육이수
       </h2>
+      <article>
+        <h3>디자인툴 피그마 과정</h3>
+        <h4>
+          <i class="fa fa-calendar fa-fw mr5"></i>2023-02 ~ 2023-04
+        </h4>
+        <p>웹 디자인, 앱 디자인 툴인 피그마를 활용하여 디자인을 배우는 과정</p>
+      </article>
       <article>
         <h3>웹기획 고급과정</h3>
         <h4>
@@ -218,7 +172,7 @@
         <p>수석 수료</p>
         <p>주요 이수기술 : OracleSQL, Java, Javascript, Android</p>
       </article>
-    </section> -->
+    </section>
   </div>
 </template>
 <script>
@@ -232,17 +186,21 @@ h2 {
   color: #222;
   margin: 0;
 }
+
 h3 {
   margin: 1rem 0;
 }
+
 h4 {
   margin: 0 0 1rem;
   font-weight: normal;
   color: #555;
 }
+
 p {
   line-height: 1.5;
 }
+
 section {
   padding: 1rem;
   border-radius: 5px;
@@ -250,6 +208,7 @@ section {
   box-shadow: 1px 1px 2px 1px #bbb;
   margin-top: 1rem;
 }
+
 article:not(:last-child) {
   border-bottom: 1px solid #ddd;
 }
