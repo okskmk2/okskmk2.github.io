@@ -153,7 +153,7 @@
       <article>
         <h3>방송통신대학교 컴퓨터과학과</h3>
         <h4>
-          <i class="fa fa-calendar fa-fw mr5"></i>2016 ~ 2018
+          <i class="fa fa-calendar fa-fw mr5"></i>2014 ~ 2018
         </h4>
         <p>주요 이수과목 : 소프트웨어 공학, 데이터베이스 설계</p>
       </article>
