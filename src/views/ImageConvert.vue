@@ -3,7 +3,7 @@
     <section class="converter-panel">
       <h2>Image Conversion</h2>
       <p class="subtitle">
-        Resize to 4K and compress to JPEG. Up to 10 MB is supported.
+        Select the longest-side dimension and target size, then convert to JPEG.
       </p>
 
       <div class="input-row">
@@ -24,6 +24,37 @@
         <div>
           <strong>Size</strong>
           <span>{{ formatBytes(originalSize) }}</span>
+        </div>
+      </div>
+
+      <div class="settings-grid">
+        <div class="field">
+          <label for="resolutionSelect">Dimension (Longest Side)</label>
+          <select
+            id="resolutionSelect"
+            v-model="selectedResolutionKey"
+            :disabled="isProcessing"
+          >
+            <option
+              v-for="option in resolutionOptions"
+              :key="option.key"
+              :value="option.key"
+            >
+              {{ option.label }} ({{ option.dimension }} px)
+            </option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="targetSizeMb">Target Size (MB)</label>
+          <input
+            id="targetSizeMb"
+            v-model.number="targetSizeMb"
+            type="number"
+            min="0.1"
+            step="0.1"
+            :disabled="isProcessing"
+          />
         </div>
       </div>
 
@@ -89,12 +120,28 @@ export default {
       outputFile: null,
       outputUrl: "",
       originalSize: 0,
+      resolutionOptions: [
+        { key: "sd", label: "SD", dimension: 720 },
+        { key: "hd", label: "HD", dimension: 1280 },
+        { key: "fhd", label: "FHD", dimension: 1920 },
+        { key: "qhd", label: "QHD", dimension: 2560 },
+        { key: "uhd4k", label: "UHD 4K", dimension: 3840 },
+      ],
+      selectedResolutionKey: "uhd4k",
+      targetSizeMb: 10,
       status: "",
       error: "",
       isProcessing: false,
     };
   },
   computed: {
+    selectedResolution() {
+      return (
+        this.resolutionOptions.find(
+          (option) => option.key === this.selectedResolutionKey,
+        ) || this.resolutionOptions[this.resolutionOptions.length - 1]
+      );
+    },
     compressionRate() {
       if (!this.outputFile || !this.originalSize) return "-";
       const ratio = (1 - this.outputFile.size / this.originalSize) * 100;
@@ -120,8 +167,15 @@ export default {
     async convert() {
       if (!this.selectedFile) return;
 
+      const targetSizeBytes = this.getTargetSizeBytes();
+      if (!targetSizeBytes) {
+        this.error = "Target size must be greater than 0 MB.";
+        this.status = "";
+        return;
+      }
+
       this.isProcessing = true;
-      this.status = "Converting...";
+      this.status = `Converting to ${this.selectedResolution.label} (${this.selectedResolution.dimension}px), ${this.targetSizeMb} MB...`;
       this.error = "";
 
       try {
@@ -134,6 +188,8 @@ export default {
           this.selectedFile.type,
           this.selectedFile.name,
           this.selectedFile.size,
+          this.selectedResolution.dimension,
+          targetSizeBytes,
         );
 
         if (this.outputUrl) {
@@ -158,6 +214,11 @@ export default {
       this.status = "";
       this.error = "";
     },
+    getTargetSizeBytes() {
+      const sizeMb = Number(this.targetSizeMb);
+      if (!Number.isFinite(sizeMb) || sizeMb <= 0) return null;
+      return Math.round(sizeMb * 1024 * 1024);
+    },
     readFileAsDataUrl(file) {
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -176,7 +237,7 @@ export default {
         return "Failed to decode the image.";
       }
       if (raw.includes("파일이 너무 복잡")) {
-        return "This file is too complex to process within 10 MB.";
+        return `This file is too complex to process within ${this.targetSizeMb} MB.`;
       }
       if (raw) return raw;
       return "Conversion failed.";
@@ -263,6 +324,33 @@ input[type="file"] {
   color: #444;
 }
 
+.settings-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  border: 1px solid #d6d6d6;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+}
+
 .actions {
   margin-top: 1.5rem;
   display: flex;
@@ -319,7 +407,7 @@ button:disabled {
   margin-top: 1rem;
   border-radius: 12px;
   padding: 1rem;
-  background: linear-gradient(135deg, #f5f5f5, #fff3e6);
+  /* background: linear-gradient(135deg, #f5f5f5, #fff3e6); */
   min-height: 180px;
   display: flex;
   align-items: center;

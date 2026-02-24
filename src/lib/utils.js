@@ -1,12 +1,14 @@
 /**
  * 이미지 단계별 압축 및 변환 함수
- * 1단계: 4K 리사이징
- * 2단계: 품질 0.8까지 하향
- * 예외: 처리 후에도 10MB 초과 시 에러 반환
+ * 1단계: 목표 해상도 리사이징
+ * 2단계: 품질 하향 압축
+ * 예외: 처리 후에도 목표 용량 초과 시 에러 반환
  * * @param {string} base64Str - 원본 이미지의 Base64 데이터
  * @param {string} mimeType - 원본 이미지의 MIME 타입
  * @param {string} filename - 저장될 파일 이름
  * @param {number} originalSize - (선택) 원본 파일의 크기(Byte)
+ * @param {number} targetDimension - (선택) 목표 최대 길이(px)
+ * @param {number} maxSizeBytes - (선택) 목표 용량(Byte)
  * @returns {Promise<File>} - 최종 압축된 JPEG File 객체
  */
 export async function processImageToFile(
@@ -14,8 +16,13 @@ export async function processImageToFile(
   mimeType,
   filename,
   originalSize = null,
+  targetDimension = 3840,
+  maxSizeBytes = 10 * 1024 * 1024,
 ) {
-  const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+  const MAX_SIZE =
+    Number.isFinite(maxSizeBytes) && maxSizeBytes > 0
+      ? maxSizeBytes
+      : 10 * 1024 * 1024;
   const TARGET_MIME = "image/jpeg";
 
   // 1. MIME 타입 유효성 검사
@@ -43,41 +50,49 @@ export async function processImageToFile(
     image.src = base64Str;
   });
 
-  // 3. 캔버스 생성 및 1차 작업: 4K 리사이징
+  // 3. 캔버스 생성 및 1차 작업: 목표 해상도 리사이징
   let canvas = document.createElement("canvas");
   let ctx = canvas.getContext("2d");
 
-  const maxDim = 3840;
+  const maxDim =
+    Number.isFinite(targetDimension) && targetDimension > 0
+      ? targetDimension
+      : 3840;
   let width = img.width;
   let height = img.height;
 
-  // 4K보다 큰 경우에만 축소
-  if (width > maxDim || height > maxDim) {
-    const scale = maxDim / Math.max(width, height);
-    width *= scale;
-    height *= scale;
-  }
+  // 목표 최대 길이보다 큰 경우에만 축소 (가로/세로 비율 유지)
+  const scale = Math.min(maxDim / Math.max(width, height), 1);
+  width = Math.max(1, Math.round(width * scale));
+  height = Math.max(1, Math.round(height * scale));
 
   canvas.width = width;
   canvas.height = height;
   ctx.drawImage(img, 0, 0, width, height);
 
-  // 4. 초기 압축 수행 (Quality 0.95 권장 - 1.0은 용량 뻥튀기 위험이 큼)
-  let finalBlob = await new Promise((res) =>
-    canvas.toBlob(res, TARGET_MIME, 0.95),
-  );
+  const toBlob = (quality) =>
+    new Promise((resolve, reject) => {
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          reject(new Error("이미지 변환에 실패했습니다."));
+          return;
+        }
+        resolve(blob);
+      }, TARGET_MIME, quality);
+    });
 
-  // 5. 2차 작업: 10MB 초과 시 품질 하향 (0.8까지)
+  // 4. 초기 압축 수행 (Quality 0.95 권장 - 1.0은 용량 뻥튀기 위험이 큼)
+  let finalBlob = await toBlob(0.95);
+
+  // 5. 2차 작업: 목표 용량 초과 시 품질 하향
   if (finalBlob.size > MAX_SIZE) {
-    for (let q = 0.9; q >= 0.8; q -= 0.05) {
-      finalBlob = await new Promise((res) =>
-        canvas.toBlob(res, TARGET_MIME, q),
-      );
+    for (let q = 0.9; q >= 0.4; q -= 0.05) {
+      finalBlob = await toBlob(q);
       if (finalBlob.size <= MAX_SIZE) break;
     }
   }
 
-  // 6. 최종 검증: 품질 0.8까지 낮췄음에도 10MB를 초과하는 경우
+  // 6. 최종 검증: 품질 하향 후에도 목표 용량을 초과하는 경우
   if (finalBlob.size > MAX_SIZE) {
     throw new Error("파일이 너무 복잡하여 처리가 불가능합니다.");
   }
