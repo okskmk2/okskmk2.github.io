@@ -1,65 +1,66 @@
-$base-font-color:#222;
+$base-font-color: #222;
+
 body {
-    margin: 0;    
-    color: $base-font-color;
-    overflow-y: scroll;
-    font-family: sans-serif;
-    background-color: #f8f8f8;
+  margin: 0;
+  color: $base-font-color;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  background-color: #f8f8f8;
 }
 
 h1 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 h3 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 header {
-    border-bottom: 1px solid #ddd;
-    background-color: #fefefe;
-    nav {
-        &>a {
-            color: inherit;
-            font-size: 1rem;
-            padding: 1rem;
-            border-bottom: 3px solid transparent;
-            &:hover {
-                border-bottom: 3px solid lightgray;
-            }
-            &.router-link-active{
-                border-bottom: 3px solid orange;
-            }
-        }
+  border-bottom: 1px solid #ddd;
+  background-color: #fefefe;
+  nav {
+    & > a {
+      color: inherit;
+      font-size: 1rem;
+      padding: 1rem;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-bottom: 3px solid lightgray;
+      }
+      &.router-link-active {
+        border-bottom: 3px solid orange;
+      }
     }
+  }
 }
 
 nav {
-    &>a {
-        text-decoration: none;
-        white-space: nowrap;
-    }
+  & > a {
+    text-decoration: none;
+    white-space: nowrap;
+  }
 }
 
 footer {
-    margin-top: 2rem;
-    padding:2rem 0;
-    background-color: #e2e2e2;
-    font-size: 24px;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #e2e2e2;
+  font-size: 24px;
 }
 
 button {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
-select{
-    padding:1px 3px;
+select {
+  padding: 1px 3px;
 }
 
-hr{
-    border: 1px solid #ddd;
+hr {
+  border: 1px solid #ddd;
 }
